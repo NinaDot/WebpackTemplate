@@ -1,0 +1,19 @@
+{
+  "name": "webpacktemplate",
+  "version": "1.0.0",
+  "description": "Webpack settings for any project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NinaDot/WebpackTemplate.git"
+  },
+  "author": "n.i.n.a.v@yandex.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NinaDot/WebpackTemplate/issues"
+  },
+  "homepage": "https://github.com/NinaDot/WebpackTemplate#readme"
+}
