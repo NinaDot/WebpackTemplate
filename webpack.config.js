@@ -19,13 +19,28 @@ module.exports = {
         })
     ],
     module: {
-        rules: [{
+        rules: 
+        [{
             test: /\.css$/,
             use: [
                 MiniCssExtractPlugin.loader,
                 "css-loader"
             ]
-        }]
+        },
+        {
+            test: /\.js$/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['@babel/preset-env']
+                }
+              },
+            exclude: '/node-modules'
+        }
+
+    ],
+      
+       
     }
 
 }
