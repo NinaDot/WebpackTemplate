@@ -22,35 +22,40 @@ module.exports = {
     ],
     module: {
         rules: 
-        [{
-            test: /\.css$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                "css-loader"
-            ]
-        },
-        {
-            test: /\.js$/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/preset-env']
-                }
-              },
-            exclude: '/node-modules'
-        },
-        {
-            test: /\.scss$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader'
-                },
-                {
-                    loader: 'sass-loader'
-                }
-            ]
-        }
+        [
+            {
+                test: /\.js$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                      presets: ['@babel/preset-env']
+                    }
+                  },
+                exclude: '/node-modules'
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader"
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ]
+            }
+        
+        
+        
+       
 
     ],
       
