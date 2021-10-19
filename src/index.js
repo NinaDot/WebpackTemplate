@@ -1,3 +1,4 @@
 
 alert("Hello, Webpack!")
-import './style.css'
+import './scss/style.scss'
+import './css/style.css'
