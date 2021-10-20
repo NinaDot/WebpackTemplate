@@ -19,7 +19,7 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: path.resolve(__dirname, "src", "index.html")
+            template: path.resolve(__dirname, "src", "pug/pages/index.pug")
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
@@ -48,6 +48,14 @@ module.exports = {
                     exclude: '/node-modules'
                 },
                 {
+                    test: /\.pug$/,
+                    use: {
+                        loader: 'pug-loader',
+                        
+                    },
+                    exclude: '/node-modules'
+                },
+                {
                     test: /\.css$/,
                     use: [
                         MiniCssExtractPlugin.loader,
@@ -57,6 +65,7 @@ module.exports = {
                 {
                     test: /\.scss$/,
                     use: [
+
                         MiniCssExtractPlugin.loader,
                         {
                             loader: 'css-loader'
